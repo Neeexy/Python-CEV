@@ -10,11 +10,20 @@ print('-------- Vamos jogar um jogo de advinhação! Vou pensar num número alea
 num_pc = rd(0, 50)
 tentativas = 0
 max = 6
+print(num_pc)
 while True:
     call = int(input('\nTente advinhar um número aleatório: '))
     tentativas += 1
     if call == num_pc:
-        print(f'\nParabéns, você acertou com {tentativas} tentativas.')
+        if tentativas == 1:
+            print(f'\nParabéns, você acertou na primeira tentativa.')
+            print(f'-------------------------------------------------')
+        elif tentativas == max:
+            print(f'\nParabéns, você acertou na última tentativa.')
+            print(f'-------------------------------------------------')
+        else:
+            print(f'\nParabéns, você acertou com {tentativas} tentativas.')
+            print(f'-------------------------------------------------')
         break
     elif call > num_pc:
         print(f'Um pouco menos, tente novamente! Você usou {tentativas} tentativas de {max}.')
