@@ -4,7 +4,7 @@ from tkinter import *
 from random import randint as rd
 def calcular_fatorial():
     try:    
-        numero = rd(1,6388237)
+        numero = rd(1,40)
         
         num_fac = fa(numero)
         resultado.config(text =f'O fatorial de {numero} é > {num_fac}')
