@@ -18,13 +18,13 @@ print(f'A soma vale : {s}')'''
 num = sum = cont = 0
 
 while True:
-    num = str(input('Digite um número ["Sair" para sair]: ')).upper()
+    num = str(input(f'Digite o {cont+1}° valor ["Sair" para sair]: ')).upper()
 
     if num == 'SAIR':
         break
     
     if not num.isdigit():
-        print(Back.RED+ f'Entrada inválida, tente novamente.{Style.RESET_ALL}') # Se o usuário digitar  qualquer palavra que não seja 'Sair', o código
+        print(Fore.RED+ f'\nEntrada inválida, tente novamente.{Style.RESET_ALL}', end='\n') # Se o usuário digitar  qualquer palavra que não seja 'Sair', o código
         continue
     
     num = int(num)
