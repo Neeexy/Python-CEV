@@ -1,4 +1,6 @@
 # Aula - 15 Interrompendo Estruturas de Repetição While
+from colorama import init, Back, Style, Fore
+init(autoreset=True)
 '''num = s =0
 
 while True:
@@ -22,13 +24,18 @@ while True:
         break
     
     if not num.isdigit():
-        print('Entrada inválida, tente novamente.') # Se o usuário digitar  qualquer palavra que não seja 'Sair', o código
+        print(Back.RED+ f'Entrada inválida, tente novamente.{Style.RESET_ALL}') # Se o usuário digitar  qualquer palavra que não seja 'Sair', o código
         continue
     
     num = int(num)
     sum += num
     cont += 1
-print()
-print('=-='*20)
-print(f' Foram inseridos: {cont} valores e a soma entre eles é: {sum}.')
-print('=-='*20)
+if cont <= 0:
+    print()
+    print(f'{Fore.YELLOW}{Style.DIM}Você não inseriu nenhum valor! Até mais.{Style.RESET_ALL}')
+    print()
+else:
+    print()
+    print('=-='*20)
+    print(f' Foram inseridos: {cont} valores e a soma entre eles é: {sum}.')
+    print('=-='*20)
