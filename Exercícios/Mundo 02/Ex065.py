@@ -17,4 +17,3 @@ média = soma / quant
 print(f'Você digitou {quant} números e a média foi {média}.')
 print(f'O maior valor foi {maior} e o menor foi {menor}')
 print('Fim')
-
