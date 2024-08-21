@@ -3,7 +3,7 @@
 cont = sum = 0
 
 while True:
-    num = int(input('Digite um valor [999 para sair]: '))
+    num = int(input('Digite um valor [999 para sair]: ')).strip()
     if num == 999:
         break
     cont += 1
