@@ -11,31 +11,30 @@ while True:
     print('-'*35)
 
     idade = int(input('Idade: '))
-    if idade > 18:
+    if idade >= 18:
         idade18 += 1
+    sexo = ' '
+    while sexo not in 'FM':
+        sexo = str(input('Sexo: [M/F] ')).upper().strip() [0]
 
-    sexo = str(input('Sexo: [M/F] ')).upper().strip() [0]
+        if sexo == 'M':
+            m += 1
 
-    if sexo == 'M':
-        m += 1
+        if sexo == 'F':
+            f += 1
+            if idade < 20:
+                fn += 1
 
-    elif sexo == 'F':
-        f += 1
-        if idade < 20:
-            fn += 1
-
-    else:
-        print('Sexo inválido.')
-        break
+            print('Sexo inválido.')
     
     pessoa += 1
 
-    confirmação = str(input('Quer continuar? [S/N]\n')).upper().strip() [0]
-    if confirmação == 'N':
-        break
-    else:
-        continue
+    confirmação = ' '
 
+    while confirmação not in 'SN':
+        confirmação = str(input('Quer continuar? [S/N]\n')).upper().strip() [0]
+    if confirmação in 'Nn':
+        break
 print('-'*35)
 print(f'Total de pessoas cadastradas : {pessoa}')
 print(f'Total de homens cadastrados: {m}')
