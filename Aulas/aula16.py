@@ -14,7 +14,5 @@ print()
 for posição, comida in enumerate(lanche):
     print(f'Vou comer por {posição+1}° o {comida}')'''
 
-a = (2, 5, 4)
-b = (5, 8, 1, 2)
-c = a+b
-print(c)
+pessoa = ('gustavo',39,'M',99.88)
+print(pessoa)
