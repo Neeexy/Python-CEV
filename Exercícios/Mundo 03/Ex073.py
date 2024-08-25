@@ -12,7 +12,7 @@ d) Em que posição está o time da Chapecoense.'''
 # 5 - Mostrar a colocação da Chapecoense (ele não está nos 20 primeiros)
 
 # ---
-times = ('Botafogo','Fortaleza','Palmeiras','Flamengo',
+times = ('Botafogo','Fortaleza','Chapecoense','Flamengo',
         'Bahia','Sao Paulo','Cruzeiro','Atletico-mg','Atletico-pr',
         'Vasco','Juventude','Red Bull Bragantino','Internacional',
         'Criciuma','Gremio','Fluminense','Vitoria','Corinthians',
@@ -34,10 +34,9 @@ print('\n→ TODOS OS TIMES EM ORDEM ALFABÉTICA ⇩⇩⇩⇩⇩⇩\n') # (C)
 times_alfabetizados = sorted(times_exibição)
 
 for t in range (0,len(times_alfabetizados),1): # (C)
-    print('→',''.join(times_alfabetizados[t:t+1]))
+    print('-',''.join(times_alfabetizados[t:t+1]))
 
-'''chap = times.index('CHAPECOENSE') + 1
-print(f'\nO time CHAPECOENSE está na {chap}° posição da tabela\n')'''
+print(f'\nO time CHAPECOENSE está na {times.index("Chapecoense")+1}ª posição da tabela\n')
 
 while True: # (D)
     time = str(input('\nQuer saber a posição de qual time? ')).capitalize()
