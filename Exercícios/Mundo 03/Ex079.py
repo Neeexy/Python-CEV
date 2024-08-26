@@ -13,7 +13,9 @@ while True:
     while sair not in 'SN':
         sair = str(input('Deseja continuar? [S/N] ')).upper().strip()[0]
     if sair == 'N':
-
+        os.system('cls')
         break
+print('-='*20)
 print(f'Números inseridos à lista foram: {sorted(numeros)}')
 print('\nCódigo Finalizado')
+print('-='*20)
