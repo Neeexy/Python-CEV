@@ -33,7 +33,7 @@ print('\n→ TODOS OS TIMES EM ORDEM ALFABÉTICA ⇩⇩⇩⇩⇩⇩\n') # (C)
 
 times_alfabetizados = sorted(times_exibição)
 
-for t in range (0,len(times_alfabetizados),1): # (C)
+for e,t in range (0,len(times_alfabetizados),1): # (C)
     print('-',''.join(times_alfabetizados[t:t+1]))
 
 print(f'\nO time CHAPECOENSE está na {times.index("Chapecoense")+1}ª posição da tabela\n')
